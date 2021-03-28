@@ -11,6 +11,7 @@ var cityFormEl = document.querySelector(".form-label");
 var weatherShowingEl = document.querySelector("#weather-search-container");
 var weatherSearchEl = document.querySelector("#weather-search-term");
 
+var weatherIcons = 
 // click event for button
 document.getElementById("submit").addEventListener("click", function(e){
     e.preventDefault();
@@ -22,10 +23,6 @@ document.getElementById("submit").addEventListener("click", function(e){
     getWeatherRepo(documentEl);
 });  
 
-// getting our information from the weather app
-
-
-
 // clicking search button
 var formHandler = function(event) {
     //doesnt allow the page to refresh
@@ -35,6 +32,7 @@ var formHandler = function(event) {
     var formLabel = cityFormEl.value.trim();
 };
 
+// getting our information from the weather app
 function getWeatherRepo(city) {
     //put together the api url
 
@@ -48,7 +46,8 @@ function getWeatherRepo(city) {
     .then(function(data) {
     console.log(data);
     });
-};
+
+ };
 
 
 
